@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnView - Reportar factores de riesgo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reportes.css">
+    <link rel="shortcut icon" href="public/image_Logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+ <header>
+        <div class="header-inner">
+            <!-- 1. Logo y Marca -->
+            <a href="index.html" class="brand">
+                <div class="logo-badge">
+                    <img src="public/image_Logo.svg" alt="Logo de OnView">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">OnView</span>
+                    <span class="brand-sub">I.E. San Antonio de Prado </span>
+                </div>
+            </a>
+
+            <!-- 2. Menú de navegación y Botón de Tema -->
+            <nav>
+                <!-- Enlaces (Asegúrate de poner class="active" en el que corresponda) -->
+                <a href="index.html">Inicio</a>
+                <a href="aprende.html">Aprende</a>
+                <a href="estadisticas.html">Estadísticas</a>
+                <span class="nav-sep"></span>
+                <a href="login.html">Iniciar sesión</a>
+                
+                <!-- Botón de Modo Oscuro al final -->
+                <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Cambiar tema">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </nav>
+
+            <!-- 3. Botón hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="menu-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </span>
+                <span class="close-icon" style="display:none;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
+
+
+    <main class="page-main">
+
+        <section class="hero">
+            <span class="pill">
+                <span><img src="public/a_clean_vector_style_graphic_logo_illustration_on.png" alt="" width="20" height="20"></span>
+                Prevención temprana
+            </span>
+            <h1>Reportar <span>factores de riesgo</span></h1>
+            <p>Reporta condiciones de una zona que podrían favorecer la presencia de roedores, aunque no hayas visto ninguno. Esto permite actuar antes de que se convierta en un avistamiento.</p>
+        </section>
+
+        <div class="layout">
+
+            <!-- Formulario -->
+            <section class="card-clean form-card">
+                <div class="card-header">
+                    <span class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </span>
+                    <h2>Datos del reporte</h2>
+                </div>
+
+                <form id="form-reporte" class="auth-form">
+
+                    <div class="form-group">
+                        <label for="zona">Zona del colegio <span class="required">*</span></label>
+                        <div class="input-wrap">
+                            <span class="input-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </span>
+                            <select id="zona" name="zona" required>
+                                <option value="" disabled selected>Selecciona una zona</option>
+                                <option value="comedor">Comedor / Cafetería (PAE)</option>
+                                <option value="patio">Patios y zonas verdes</option>
+                                <option value="aulas">Bloque de aulas</option>
+                                <option value="bodega">Bodega / Almacén</option>
+                                <option value="banos">Servicios sanitarios</option>
+                                <option value="otra">Otra área del plantel</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Factores de riesgo observados <span class="required">*</span></label>
+                        <div class="factors-grid">
+                            <label class="factor-item">
+                                <span class="factor-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6" />
+                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                                        <path d="M10 11v6" />
+                                        <path d="M14 11v6" />
+                                        <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                                    </svg>
+                                </span>
+                                <span class="factor-text">Basura acumulada</span>
+                                <span class="switch">
+                                    <input type="checkbox" name="factor" value="basura">
+                                    <span class="switch-slider"></span>
+                                </span>
+                            </label>
+
+                            <label class="factor-item">
+                                <span class="factor-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 2v7a4 4 0 0 0 4 4h1v9" />
+                                        <path d="M7 2v7" />
+                                        <path d="M11 2v7" />
+                                        <path d="M18 2c-2 2-3 5-3 8a5 5 0 0 0 5 5v9" />
+                                    </svg>
+                                </span>
+                                <span class="factor-text">Restos de comida</span>
+                                <span class="switch">
+                                    <input type="checkbox" name="factor" value="comida">
+                                    <span class="switch-slider"></span>
+                                </span>
+                            </label>
+
+                            <label class="factor-item">
+                                <span class="factor-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2.7 4.9 11a9 9 0 1 0 14.2 0z" />
+                                    </svg>
+                                </span>
+                                <span class="factor-text">Humedad o fugas</span>
+                                <span class="switch">
+                                    <input type="checkbox" name="factor" value="humedad">
+                                    <span class="switch-slider"></span>
+                                </span>
+                            </label>
+
+                            <label class="factor-item">
+                                <span class="factor-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg>
+                                </span>
+                                <span class="factor-text">Posibles refugios</span>
+                                <span class="switch">
+                                    <input type="checkbox" name="factor" value="refugio">
+                                    <span class="switch-slider"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <span class="field-hint">Activa los que apliquen.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="otro-factor">Otro factor <span class="opcional">(opcional)</span></label>
+                        <div class="input-wrap">
+                            <span class="input-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </span>
+                            <input type="text" id="otro-factor" name="otro-factor" placeholder="Ej: caneca sin tapa, rejilla rota...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción adicional <span class="opcional">(opcional)</span></label>
+                        <div class="input-wrap textarea-wrap">
+                            <span class="input-icon icon-top" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="17" y1="10" x2="3" y2="10" />
+                                    <line x1="21" y1="6" x2="3" y2="6" />
+                                    <line x1="21" y1="14" x2="3" y2="14" />
+                                    <line x1="17" y1="18" x2="3" y2="18" />
+                                </svg>
+                            </span>
+                            <textarea id="descripcion" name="descripcion" rows="3" placeholder="Agrega cualquier detalle que consideres importante."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Enviar reporte</span>
+                        <span class="btn-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div id="mensaje-exito" class="alert-success hidden">
+                        <span class="alert-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>¡Gracias por tu reporte!</strong>
+                            Tu reporte quedó registrado. Por ahora es solo visual; se conectará a la base de datos más adelante.
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar-container">
+                <div class="card-clean sidebar-info">
+                    <div class="card-header">
+                        <span class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="16" x2="12" y2="12" />
+                                <line x1="12" y1="8" x2="12.01" y2="8" />
+                            </svg>
+                        </span>
+                        <h2>¿Qué es un factor de riesgo?</h2>
+                    </div>
+
+                    <p>Son condiciones del entorno que favorecen la presencia de roedores: comida fácil, refugios, humedad o basura acumulada. Detectarlas a tiempo evita un avistamiento.</p>
+
+                    <ul class="sidebar-list">
+                        <li>
+                            <span class="item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                            </span>
+                            <span class="item-text">No necesitas haber visto un roedor para reportar.</span>
+                        </li>
+                        <li>
+                            <span class="item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5" />
+                                    <path d="M2 12l10 5 10-5" />
+                                </svg>
+                            </span>
+                            <span class="item-text">Ayudas a priorizar zonas antes de que haya un problema.</span>
+                        </li>
+                        <li>
+                            <span class="item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                </svg>
+                            </span>
+                            <span class="item-text">El equipo recibe tu reporte y lo analiza.</span>
+                        </li>
+                        <li>
+                            <span class="item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </span>
+                            <span class="item-text">No se usan químicos ni trampas caseras: solo prevención.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-clean limit-card">
+                    <div class="limit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <div class="limit-text">
+                        <strong>Límite diario</strong>
+                        <p>Recuerda que solo puedes realizar un máximo de <strong>3 reportes</strong> por día para mantener el orden.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div><!-- /.layout -->
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-copy">
+                <span><strong>OnView</strong> • Proyecto Media Técnica — I.E. San Antonio de Prado</span>
+                <span>Medellín, Antioquia</span>
+            </div>
+            <div class="footer-logos" aria-label="Instituciones aliadas">
+                <img src="public/pascual.png" alt="Institución Pascual" class="footer-logo">
+                <img src="public/alcaldia.png" alt="Alcaldía de Medellín" class="footer-logo">
+                <img src="public/sadep.png" alt="SADEP" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnView - Iniciar sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="public/a_clean_vector_style_graphic_logo_illustration_on.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<!-- Marca flotante minimalista (sin caja) -->
+<a href="index.html" class="brand-floating">
+    <img src="public/image_Logo.svg" alt="Logo de OnView" class="brand-logo-img" width="48" height="48">
+    <div class="brand-text">
+        <span class="brand-title">OnView</span>
+        <span class="brand-sub">I.E. San Antonio de Prado</span>
+    </div>
+</a>
+
+<!-- Botón de tema flotante -->
+<button class="theme-toggle theme-toggle-float" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Cambiar tema">
+    <span class="theme-icon" aria-hidden="true">☾</span>
+    <span class="theme-label">Modo oscuro</span>
+</button>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<main class="auth-main">
+
+    <section class="hero">
+        <span class="pill">
+            <span><img src="public/a_clean_vector_style_graphic_logo_illustration_on.png" alt="" width="" height="20"></span>
+            Acceso al sistema
+        </span>
+        <h1>Iniciar <span>sesión</span></h1>
+        <p>Ingresa con tu cuenta institucional para registrar y consultar avistamientos en el plantel.</p>
+    </section>
+
+    <section class="auth-card">
+
+        <form id="form-login" class="auth-form">
+
+            <!-- Selector de rol -->
+            <div class="form-group">
+                <label>Rol de acceso <span class="required">*</span></label>
+                <div class="role-selector" role="radiogroup" aria-label="Selecciona tu rol">
+                    <label class="role-option">
+                        <input type="radio" name="rol" value="maestro" required>
+                        <span class="role-card">
+                            <span class="role-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                </svg>
+                            </span>
+                            <span class="role-name">Maestro</span>
+                        </span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="rol" value="administrador" required>
+                        <span class="role-card">
+                            <span class="role-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </span>
+                            <span class="role-name">Administrador</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Usuario -->
+            <div class="form-group">
+                <label for="usuario">Nombre de usuario <span class="required">*</span></label>
+                <div class="input-wrap">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </span>
+                    <input type="text" id="usuario" name="usuario" placeholder="Tu usuario institucional" required autocomplete="username">
+                </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="form-group">
+                <label for="password">Contraseña <span class="required">*</span></label>
+                <div class="input-wrap">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </span>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <span>Ingresar</span>
+                <span class="btn-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </span>
+            </button>
+
+            <div id="mensaje-login" class="alert-success hidden">
+                <span class="alert-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </span>
+                <div>
+                    <strong>Acceso validado (demo)</strong>
+                    En una siguiente versión se conectará con la base de datos institucional.
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <p class="auth-footer-link">
+        ¿No tienes cuenta? <a href="index.html">Volver al inicio</a>
+    </p>
+
+</main>
+
+<footer>
+
+</footer>
+
+<script>
+const form = document.getElementById('form-login');
+const mensaje = document.getElementById('mensaje-login');
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const rol = form.querySelector('input[name="rol"]:checked');
+        if (!rol) return;
+        mensaje.classList.remove('hidden');
+        mensaje.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+}
+</script>
+
+<script src="js/funciones.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnView - Guía de Prevención</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/aprende.css">
+    <link rel="shortcut icon" href="public/image_Logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <!-- ==========================================================================
+     CABECERA SUPERIOR
+     ========================================================================== -->
+    <header>
+        <div class="header-inner">
+            <!-- 1. Logo y Marca -->
+            <a href="index.html" class="brand">
+                <div class="logo-badge">
+                    <img src="public/image_Logo.svg" alt="Logo de OnView">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">OnView</span>
+                    <span class="brand-sub">I.E. San Antonio de Prado </span>
+                </div>
+            </a>
+
+            <!-- 2. Menú de navegación y Botón de Tema -->
+            <nav>
+                <!-- Enlaces (Asegúrate de poner class="active" en el que corresponda) -->
+                <a href="index.html">Inicio</a>
+                <a href="reportes.html">Reportes</a>
+                <a href="estadisticas.html">Estadísticas</a>
+                <span class="nav-sep"></span>
+                <a href="login.html">Iniciar sesión</a>
+
+                <!-- Botón de Modo Oscuro al final -->
+                <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false"
+                    aria-label="Cambiar tema">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </nav>
+
+            <!-- 3. Botón hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="menu-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </span>
+                <span class="close-icon" style="display:none;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+     CONTENIDO PRINCIPAL
+     ========================================================================== -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <span class="pill">
+                <span><img src="public/a_clean_vector_style_graphic_logo_illustration_on.png" alt="" width="20"
+                        height="20"></span>
+                Educación y Conciencia
+            </span>
+            <h1>Aprende a <span>prevenir</span></h1>
+            <p>La mejor forma de evitar los avistamientos es cortando el acceso a lo que los atrae. Sigue estos consejos
+                prácticos en tu día a día escolar.</p>
+        </section>
+
+        <!-- Grid de Consejos (Tarjetas) -->
+        <section class="learn-grid">
+
+            <!-- Consejo 1 -->
+            <article class="card-clean learn-card">
+                <div class="learn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                        <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                    </svg>
+                </div>
+                <h3>Manejo de residuos</h3>
+                <p>Asegúrate de que la basura siempre termine en las canecas y que estas permanezcan tapadas. La basura
+                    acumulada es el principal atractivo.</p>
+            </article>
+
+            <!-- Consejo 2 -->
+            <article class="card-clean learn-card">
+                <div class="learn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 2v7a4 4 0 0 0 4 4h1v9" />
+                        <path d="M7 2v7" />
+                        <path d="M11 2v7" />
+                        <path d="M18 2c-2 2-3 5-3 8a5 5 0 0 0 5 5v9" />
+                    </svg>
+                </div>
+                <h3>No dejes comida</h3>
+                <p>Guarda tus refrigerios en recipientes cerrados. Evita dejar restos de comida en los pupitres, el
+                    comedor o los patios del colegio.</p>
+            </article>
+
+            <!-- Consejo 3 -->
+            <article class="card-clean learn-card">
+                <div class="learn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2.7 4.9 11a9 9 0 1 0 14.2 0z" />
+                    </svg>
+                </div>
+                <h3>Reporta fugas de agua</h3>
+                <p>La humedad crea un ambiente perfecto para que los roedores se acerquen a beber y a hacer sus nidos.
+                    Reporta cualquier gotera.</p>
+            </article>
+
+            <!-- Consejo 4 -->
+            <article class="card-clean learn-card">
+                <div class="learn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <h3>Evita obstruir rincones</h3>
+                <p>Las cajas viejas o muebles amontonados en bodegas y salones sirven de refugio. Mantén los espacios
+                    despejados y ordenados.</p>
+            </article>
+
+        </section>
+
+        <!-- Sección extra de concientización -->
+        <section class="callout-card card-clean">
+            <div class="callout-content">
+                <h2>¿Sabías qué?</h2>
+                <p>Un solo roedor puede tener hasta 12 crías por camada y reproducirse muy rápido. Por eso, prevenir con
+                    aseo y reportando a tiempo es mucho más efectivo que intentar eliminarlos después.</p>
+                <a href="index.html" class="btn-submit" style="max-width: 300px; margin-top: 16px;">
+                    <span>Ir a Registrar Avistamiento</span>
+                    <span class="btn-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+     PIE DE PÁGINA
+     ========================================================================== -->
+    <footer>
+        <div class="footer-inner">
+            <span><strong>OnView</strong> • Proyecto Media Técnica en Desarrollo de Software — I.E. San Antonio de
+                Prado</span>
+            <span>Medellín, Antioquia</span>
+        </div>
+
+        <div class="footer-logos" aria-label="Instituciones aliadas">
+            <img src="public/pascual.png" alt="Institución Pascual" class="footer-logo" />
+            <img src="public/alcaldia.png" alt="Alcaldía de Medellín" class="footer-logo" />
+            <img src="public/sadep.png" alt="SADEP" class="footer-logo" />
+        </div>
+        </div>
+    </footer>
+
+    <!-- Enlace a tu archivo JavaScript separado (menú y tema) -->
+    <script src="js/funciones.js"></script>
+
+</body>
+
+</html>

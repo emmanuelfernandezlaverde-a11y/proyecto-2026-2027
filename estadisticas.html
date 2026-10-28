@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnView - Estadísticas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estadisticas.css">
+    <link rel="shortcut icon" href="public/image_Logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <!-- ==========================================================================
+     CABECERA SUPERIOR
+     ========================================================================== -->
+    <header>
+        <div class="header-inner">
+            <!-- 1. Logo y Marca -->
+            <a href="index.html" class="brand">
+                <div class="logo-badge">
+                    <img src="public/image_Logo.svg" alt="Logo de OnView">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">OnView</span>
+                    <span class="brand-sub">I.E. San Antonio de Prado </span>
+                </div>
+            </a>
+
+            <!-- 2. Menú de navegación y Botón de Tema -->
+            <nav>
+                <!-- Enlaces (Asegúrate de poner class="active" en el que corresponda) -->
+                <a href="index.html">Inicio</a>
+                <a href="reportes.html">Reportes</a>
+                <a href="aprende.html">Aprende</a>
+                <span class="nav-sep"></span>
+                <a href="login.html">Iniciar sesión</a>
+                
+                <!-- Botón de Modo Oscuro al final -->
+                <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Cambiar tema">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </nav>
+
+            <!-- 3. Botón hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="menu-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </span>
+                <span class="close-icon" style="display:none;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ==========================================================================
+     CONTENIDO PRINCIPAL
+     ========================================================================== -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <span class="pill">
+                 <span><img src="public/a_clean_vector_style_graphic_logo_illustration_on.png" alt="" width="20" height="20"></span>
+                Panel de Control
+            </span>
+            <h1>Datos y <span>Estadísticas</span></h1>
+            <p>Visualiza el impacto de los reportes en el plantel. Estos datos ayudan a priorizar las zonas de aseo y mantenimiento.</p>
+        </section>
+
+        <!-- Tarjetas KPI (Números grandes) -->
+        <section class="kpi-grid">
+            <div class="card-clean kpi-card">
+                <div class="kpi-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                </div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Total Reportes</span>
+                    <strong class="kpi-value">124</strong>
+                    <span class="kpi-trend trend-up">+12% este mes</span>
+                </div>
+            </div>
+
+            <div class="card-clean kpi-card">
+                <div class="kpi-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Atendidos</span>
+                    <strong class="kpi-value">98</strong>
+                    <span class="kpi-trend trend-up">79% de efectividad</span>
+                </div>
+            </div>
+
+            <div class="card-clean kpi-card">
+                <div class="kpi-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Pendientes</span>
+                    <strong class="kpi-value">26</strong>
+                    <span class="kpi-trend trend-warn">Por revisar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Gráficos -->
+        <div class="charts-layout">
+            
+            <!-- Gráfico de Barras: Zonas más afectadas -->
+            <section class="card-clean chart-card">
+                <div class="card-header">
+                    <h2>Zonas más afectadas</h2>
+                </div>
+                <div class="bar-chart">
+                    
+                    <div class="bar-row">
+                        <span class="bar-label">Comedor</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 85%;">
+                                <span class="bar-value">42</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-row">
+                        <span class="bar-label">Aulas</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 60%;">
+                                <span class="bar-value">30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-row">
+                        <span class="bar-label">Bodegas</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 45%;">
+                                <span class="bar-value">22</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-row">
+                        <span class="bar-label">Patios</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 30%;">
+                                <span class="bar-value">15</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bar-row">
+                        <span class="bar-label">Baños</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 20%;">
+                                <span class="bar-value">10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Gráfico de Dona: Tipos de factores -->
+            <section class="card-clean chart-card">
+                <div class="card-header">
+                    <h2>Factores principales</h2>
+                </div>
+                <div class="donut-container">
+                    <!-- Gráfico hecho 100% con CSS usando conic-gradient -->
+                    <div class="donut-chart">
+                        <div class="donut-inner">
+                            <span>124</span>
+                            <small>Total</small>
+                        </div>
+                    </div>
+                    
+                    <ul class="donut-legend">
+                        <li>
+                            <span class="legend-color color-1"></span>
+                            Basura (50%)
+                        </li>
+                        <li>
+                            <span class="legend-color color-2"></span>
+                            Comida (30%)
+                        </li>
+                        <li>
+                            <span class="legend-color color-3"></span>
+                            Humedad (20%)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ==========================================================================
+     PIE DE PÁGINA
+     ========================================================================== -->
+     <footer>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <span
+            ><strong>OnView</strong> - Proyecto Media Técnica — I.E. San Antonio
+            de Prado</span
+          >
+          <span>Medellín, Antioquia</span>
+        </div>
+
+        <div class="footer-logos" aria-label="Instituciones aliadas">
+          <img
+            src="public/pascual.png"
+            alt="Institución Pascual"
+            class="footer-logo"
+          />
+          <img
+            src="public/alcaldia.png"
+            alt="Alcaldía de Medellín"
+            class="footer-logo"
+          />
+          <img src="public/sadep.png" alt="SADEP" class="footer-logo" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+
+</body>
+
+</html>
